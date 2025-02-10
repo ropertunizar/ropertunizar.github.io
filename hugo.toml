@@ -1,5 +1,6 @@
 languageCode = 'en-us'
 title = 'RoPeRT Publications'
+enableRobotsTXT = true
 
 [markup.goldmark.renderer]
 unsafe = true
