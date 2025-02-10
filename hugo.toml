@@ -1,0 +1,11 @@
+languageCode = 'en-us'
+title = 'RoPeRT Publications'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+style = "github"
+
+[taxonomies]
+project = "projects"
