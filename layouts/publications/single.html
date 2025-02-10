@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ .Title }}</title>
+  <meta name="description" content="{{ .Params.description }}">
+  <meta name="keywords" content="{{ delimit .Params.keywords ", " }}">
+
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ .Params.description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ .Params.description }}">
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <script src="/js/main.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="venue">{{ .Params.venue }}</div>
+
+  <h1 class="title">{{ .Title }}</h1>
+
+  {{- $affdict := dict }}
+  {{- $affcounter := 1 }}
+  {{- $affiliations := slice }}
+
+  {{- $notessymbols := slice "*" "†" "‡" "§" "¶" }}
+  {{- $notesdict := dict }}
+  {{- $notescounter := 0 }}
+  {{- $notes := slice }}
+
+  {{- range .Params.authors }}
+    {{- range .affiliations }}
+      {{- if not (index $affdict .)}}
+        {{- $affdict = merge $affdict (dict . $affcounter) }}
+        {{- $affcounter = add $affcounter 1 }}
+        {{- $affiliations = $affiliations | append . }}
+      {{- end }}
+    {{- end }}
+    {{- range .notes }}
+      {{- if not (index $notesdict .)}}
+        {{- $notesdict = merge $notesdict (dict . (index $notessymbols $notescounter)) }}
+        {{- $notescounter = add $notescounter 1 }}
+        {{- $notes = $notes | append . }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+
+  <div class="authors">
+    {{- range .Params.authors }}
+      {{- $superindices := slice }}
+      {{- if gt (len $affiliations) 1 }}
+        {{- range .affiliations }}
+          {{- $superindices = $superindices | append (index $affdict .) }}
+        {{- end }}
+      {{- end }}
+      {{- range .notes }}
+        {{- $superindices = $superindices | append (index $notesdict .) }}
+      {{- end }}
+      <span><a href="{{ .url }}">{{ .name }}</a><sup>{{ delimit $superindices "," }}</sup></span>
+    {{- end }}
+  </div>
+
+  {{ if ge (len $notes) 1 -}}
+    <div class="notes">
+      {{- range $notes }}
+        <span><sup>{{ (index $notesdict .) }}</sup>{{ . }}</span>
+      {{- end }}
+    </div>
+  {{- end }}
+
+  <div class="affiliations">
+    {{- range $affiliations }}
+      {{- if gt (len $affdict) 1 }}
+        <span><sup>{{ (index $affdict .) }}</sup>{{ . }}</span>
+      {{- else }}
+        <span>{{ . }}</span>
+      {{- end }}
+    {{- end }}
+  </div>
+
+  <div class="links">
+    {{- range .Params.links }}
+      {{- $prefix := index (split .icon "-" ) 0 }}
+      <a href="{{ .url }}"><i class="{{ $prefix }} {{ .icon }}"></i> {{ .name }}</a>
+    {{- end }}
+  </div>
+</header>
+
+<main>
+  <section class="content">
+    {{ .Content }}
+  </section>
+</main>
+
+{{ partial "site-footer.html" . }}
+
+</body>
+</html>
