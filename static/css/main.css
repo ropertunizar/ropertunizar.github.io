@@ -14,7 +14,7 @@ body {
   line-height: 1.5em;
   font-weight: 400;
 
-  max-width: 80ch;
+  max-width: 800px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -134,7 +134,7 @@ sup {
   padding: 7px 20px;
   border: 1px solid var(--link-color);
   border-radius: 20px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.25s ease;
 }
 
 .links a:hover {
@@ -157,36 +157,33 @@ figure figcaption {
 }
 
 .code-container {
-  display: flex;
-  align-items: flex-start;
   background-color: var(--background-secondary-color);
-  margin: 1rem 0;
+  margin: 1em 0;
 }
 
 pre {
-  flex: 1;
   margin: 0;
-  padding: 10px 15px;
+  padding: 1em;
+  line-height: 1.2;
   overflow-x: auto;
-  font-family: monospace;
-  line-height: 1.2rem; 
-  background-color: var(--background-secondary-color)!important;
+  background-color: var(--background-secondary-color) !important;
 }
 
-.copy-button {
+.clipboard-button {
+  float: right;
+  font-size: 1em;
   margin: 5px;
   padding: 5px;
-  background-color: transparent;
   color: rgba(0, 0, 0, 0.4);
+  background-color: transparent;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.25s ease;
 }
 
-.copy-button:hover {
-  background-color: rgba(0, 0, 0, 0.1)
+.clipboard-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 article.publication {

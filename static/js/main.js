@@ -4,14 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // create container around the pre block
         const container = document.createElement('div');
         container.className = 'code-container';
-        pre.parentNode.insertBefore(container, pre);
-        container.appendChild(pre);
 
-        // insert button in the container
+        // insert the button
         const button = document.createElement('button');
         button.innerHTML = '<i class="bi bi-copy"></i>';
-        button.className = 'copy-button';
+        button.className = 'clipboard-button';
         container.appendChild(button);
+
+        // insert the pre block
+        pre.parentNode.insertBefore(container, pre);
+        container.appendChild(pre);
 
         button.addEventListener('click', function() {
             const codeText = pre.innerText;
