@@ -50,18 +50,6 @@ slug: eventsleep
   </div>
 </figure>
 
-<div style="display: flex; width: 300px;">
-  <img style="flex: 1 1 0; width: 200px;" src="img/arms_shake_event.gif">
-  <img style="flex: 1 1 0; min-width: 0; max-width: 300px; object-fit: cover" src="img/roll_event.gif">
-  <img style="flex: 1 1 0; min-width: 0; max-width: 300px;; object-fit: cover" src="img/legs_event.gif">
-</div>
-
-<div style="display: flex; width: 300px;">
-  <img style="min-width: 0; width: 200px;" src="img/arms_shake_event.gif">
-  <img style="min-width: 0; width: 300px;" src="img/roll_event.gif">
-  <img style="min-width: 0; width: 300px;" src="img/legs_event.gif">
-</div>
-
 ## Project Context
 
 DeepSleep is a project in collaboration between the RoPeRT research group from Universidad de Zaragoza and BitBrain, a neurotechnology company that combines neuroscience, artificial intelligence, and hardware to help researchers and health professionals leverage neuroscience in a practical and reliable way.
