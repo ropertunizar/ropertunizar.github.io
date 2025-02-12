@@ -30,6 +30,7 @@ links:
     url: "https://arxiv.org/abs/2408.15899"
 slug: genswarms
 keywords: ["drones", "generative-models"]
+description: ""
 ---
 
 <img src="genswarms.jpg" width="100%">

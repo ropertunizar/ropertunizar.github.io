@@ -40,6 +40,7 @@ links:
 project: deep-sleep
 keywords: ["event-cameras", "action-recognition"]
 slug: eventsleep
+description: We present a dataset to investigate the suitability of event cameras to analyze in a non-invasive manner specific behaviors that occur while sleeping and lead to sleeping disorders.
 ---
 
 <figure class="teaser">

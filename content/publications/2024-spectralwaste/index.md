@@ -45,7 +45,7 @@ links:
 project: separa
 slug: spectralwaste
 keywords: ["hyperspectral-imaging", "semantic-segmentation", "recycling"]
-description: Esta es una descripción corta de mi paper
+description: We introduce SpectralWaste, a dataset for waste segmentation collected in a real waste processing facility using a multimodal imaging setup comprising an RGB camera and a hyperspectral camera. 
 image: smallteaser.png
 ---
 
@@ -55,7 +55,7 @@ image: smallteaser.png
 
 ## Description
 
-In this project, we introduce a dataset for waste segmentation, collected in a real waste processing facility using a multimodal imaging setup comprising an RGB camera and a hyperspectral camera. The data was captured with a true-to-life prototype of a conveyor belt, closely replicating real-world operating conditions. The waste streams were recorded as they arrived to the facility for initial classification, ensuring that the dataset accurately represents the materials encountered in the first stage of the sorting process.
+In this project, we introduce SpectralWaste, a dataset for waste segmentation, collected in a real waste processing facility using a multimodal imaging setup comprising an RGB camera and a hyperspectral camera. The data was captured with a true-to-life prototype of a conveyor belt, closely replicating real-world operating conditions. The waste streams were recorded as they arrived to the facility for initial classification, ensuring that the dataset accurately represents the materials encountered in the first stage of the sorting process.
 
 For image acquisition, two synchronized line-scan cameras were used:
 
