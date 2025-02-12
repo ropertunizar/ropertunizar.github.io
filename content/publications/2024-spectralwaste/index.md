@@ -55,13 +55,25 @@ image: smallteaser.png
 
 ## Description
 
-In this project, we use data from a real waste processing facility specializing in plastics, cartons, and cans. The data was collected with a true-to-life prototype of the conveyor belt installed on the waste separation line, closely mimicking the actual installation. This ensures that the waste streams captured accurately mirror those arriving at the facility for separation. Two synchronized cameras were installed for image gathering: a line-scan RGB camera (Teledyne DALSA Linea) and line-scan hyperspectral camera that captures 224 contiguous spectral bands in a range from 900 to 1700 nm (Specim FX17).
+In this project, we introduce a dataset for waste segmentation, collected in a real waste processing facility using a multimodal imaging setup comprising an RGB camera and a hyperspectral camera. The data was captured with a true-to-life prototype of a conveyor belt, closely replicating real-world operating conditions. The waste streams were recorded as they arrived to the facility for initial classification, ensuring that the dataset accurately represents the materials encountered in the first stage of the sorting process.
 
-In the collected images, the objects for automatic identification were selected based on the requirements of the facility. Each class represents elements that commonly cause operational problems in recycling lines, impacting the efficiency of the sorting process. Among these problems, machinery jams pose a significant issue, causing a complete stoppage of the process until the obstructing object is removed. These objects include film and basket, large objects that can clog the conveyor belts as they are not easily breakable; video tape and filament, representing long objects prone to entangling with mechanical parts and requiring manual intervention; trash bag, which encompasses closed bags containing waste that need to be mechanically opened for further processing; and cardboard, paper objects whose recovery adds value by sending them to another recycling process.
+For image acquisition, two synchronized line-scan cameras were used:
+
+* RGB Camera: Teledyne DALSA Linea.
+* Hyperspectral Camera: Specim FX17, capturing 224 contiguous spectral bands within the 900–1700 nm range.
+
+The annotations focus on objects that pose operational challenges in automated waste sorting, directly impacting efficiency and reliability. Each class represents a material commonly responsible for disruptions, particularly machinery jams, which can halt the entire process until the obstruction is manually removed. The key problematic objects include:
+
+* Film and basket: Large, rigid materials that clog conveyor belts.
+* Video tape and filament: Long, flexible objects prone to entanglement with mechanical components.
+* Trash bag: Closed waste bags requiring mechanical opening for proper sorting.
+* Cardboard and paper: Valuable recyclable materials that should be redirected into separate recovery processes.
+
+By providing high-resolution multimodal data under realistic conditions, this dataset supports the development of more robust waste identification and sorting models, aiming to improve recycling efficiency and minimize process interruptions.
 
 ## Code and Datasets
 
-The raw SpectralWaste dataset is available in the following links. We provide a version only containing the labeled images for easier download. The code to load and process this dataset is available on [GitHub][dataset-repo].
+The raw SpectralWaste dataset can be accessed through the links below. For convenience, we provide a version containing only labeled images for easier download. The code to load and process this dataset is available on [GitHub][dataset-repo].
 
 * Raw labeled dataset:
   * RGB and HSI images (105 GB): [OneDrive][raw-labeled-onedrive].
@@ -69,7 +81,7 @@ The raw SpectralWaste dataset is available in the following links. We provide a 
   * RGB images (3.8 GB): [OneDrive][raw-full-rgb-onedrive].
   * RGB and HSI images (1.3 TB): Please contact the [authors](mailto:fpena@unizar.es,acm@unizar.es).
 
-In the paper we use a preprocessed version of the labeled images for reduced storage, which can be directly downloaded from the following links. The code to replicate the paper experiments using this data is available on [GitHub][segmentation-repo]. 
+For the paper, we use a preprocessed version of the labeled images, optimized for both reduced storage and faster training. The code to replicate the experiments using this version is available on [GitHub][segmentation-repo].
 
 * Labeled RGB and HSI images (23 GB): [Zenodo][preprocessed-labeled-zenodo], [OneDrive][preprocessed-labeled-onedrive].
 * Unlabeled RGB and HSI images (178 GB): [OneDrive][preprocessed-unlabeled-onedrive].
@@ -99,6 +111,5 @@ In the paper we use a preprocessed version of the labeled images for reduced sto
 ## Acknowledgements
 
 This work was supported by DGA project T45 23R and by MCIN/AEI/ERDF/European Union NextGenerationEU/PRTR project PID2021-125514NB-I00. The authors thank the SEPARA project and all its partners: Ecoembes, Picvisa, PiperLab, Trienekens, Fundación GAIKER and Leitat.
-
 
 <img src="/logos/aei-eu.png" style="width: 250px; display: block; margin: 0 auto">
