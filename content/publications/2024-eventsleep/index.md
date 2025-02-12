@@ -43,12 +43,24 @@ slug: eventsleep
 ---
 
 <figure class="teaser">
-  <div style="display: flex">
-    <img style="max-width: 33.33%" src="img/arms_shake_event.gif">
-    <img style="max-width: 33.33%" src="img/roll_event.gif">
-    <img style="max-width: 33.33%" src="img/legs_event.gif">
+  <div style="display: grid; width: 100%; grid-template-columns: repeat(3, 1fr)">
+    <img src="img/arms_shake_event.gif">
+    <img src="img/roll_event.gif">
+    <img src="img/legs_event.gif">
   </div>
 </figure>
+
+<div style="display: flex; width: 300px;">
+  <img style="flex: 1 1 0; width: 200px;" src="img/arms_shake_event.gif">
+  <img style="flex: 1 1 0; min-width: 0; max-width: 300px; object-fit: cover" src="img/roll_event.gif">
+  <img style="flex: 1 1 0; min-width: 0; max-width: 300px;; object-fit: cover" src="img/legs_event.gif">
+</div>
+
+<div style="display: flex; width: 300px;">
+  <img style="min-width: 0; width: 200px;" src="img/arms_shake_event.gif">
+  <img style="min-width: 0; width: 300px;" src="img/roll_event.gif">
+  <img style="min-width: 0; width: 300px;" src="img/legs_event.gif">
+</div>
 
 ## Project Context
 
@@ -70,13 +82,15 @@ The dataset includes video sequences of 14 different participants in 3 different
 
 Trials were recorded with two different cameras: infrared (ELP HD Digital Camera, 6 fps) and event (DVXplorer camera, 640x480 resolution). Both cameras were placed together attached to a metal bar and located 2 meters above the center of the bed, ensuring a full observation of the participants movements.
 
- <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto; gap: 10px; max-width: 500px; margin: 0 auto;">
-   <img src="img/setup.png" style="grid-column: 1; grid-row: 1 / span 2; width: 100%; height: 100%">
-   <img src="img/event_camera.png" style="width: 100%; display: block;">
-   <img src="img/hands2head_event.gif" style="width: 100%; display: block;">
-   <img src="img/ir_camera.png" style="width: 100%; display: block;">
-   <img src="img/hands2head_ir.gif" style="width: 100%; display: block;">
- </div>
+<figure style="max-width: 500px">
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+    <img src="img/setup.png" style="grid-column: 1; grid-row: 1 / span 2">
+    <img src="img/event_camera.png">
+    <img src="img/hands2head_event.gif">
+    <img src="img/ir_camera.png">
+    <img src="img/hands2head_ir.gif">
+  </div>
+</figure>
 
 ### Scene Configurations
 
@@ -88,14 +102,16 @@ EventSleep was recorded in a room that mimics a regular room with a double-size 
 
 The full darkness setup (≤0.1 lux) consists of a bedroom with all lights off, door and window closed, with dense blinds covering the window. The partial darkness setup (0.2 lux) consists of a small night lamp on, placed on the floor far away from the head of the subject.
 
- <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto; gap: 10px; max-width: 700px; margin: 0 auto;">
-   <img src="img/config1.png" style="width: 100%; height: 100%">
-   <img src="img/config2.png" style="width: 100%; display: block;">
-   <img src="img/config3.png" style="width: 100%; display: block;">
-   <img src="img/roll_event.gif" style="width: 100%; display: block;">
-   <img src="img/hands2head_event.gif" style="width: 100%; display: block;">
-   <img src="img/legs_event.gif" style="width: 100%; display: block;">
- </div>
+<figure style="max-width: 700px">
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto; gap: 10px;">
+    <img src="img/config1.png">
+    <img src="img/config2.png">
+    <img src="img/config3.png">
+    <img src="img/roll_event.gif">
+    <img src="img/hands2head_event.gif">
+    <img src="img/legs_event.gif">
+  </div>
+</figure>
 
 ### Activity Labels
 
@@ -103,9 +119,9 @@ All subjects were instructed to execute a certain set of movements and positions
 
 Within this context, experts in the field identified specific actions that appear in normal sleep (e.g. transitions between sleep positions) and in sleep disorders such as restless legs syndrome or periodic limb movement (e.g. shaking the legs). Since many sleep studies require the recording of physiological information, we also considered positions that could impact the performance of other sensors such as a headband for polysomnography. The set of 10 activity labels considered are the following:
 
-<div style="text-align: center; margin: 0 auto">
-  <img src="img/labels.jpg" style="width: 100%">
-</div>
+<figure>
+  <img src="img/labels.jpg">
+</figure>
 
 <!-- ## Demos
 
