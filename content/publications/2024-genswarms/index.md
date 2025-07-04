@@ -31,6 +31,7 @@ links:
 slug: genswarms
 keywords: ["drones", "generative-models"]
 description: ""
+footer: "© 2025 the authors (as listed above). The content of this page is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). External resources (e.g., datasets, code) are subject to their own licenses."
 ---
 
 <img src="genswarms.jpg" width="100%">

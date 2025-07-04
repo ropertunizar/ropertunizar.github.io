@@ -45,12 +45,13 @@ links:
 project: separa
 slug: spectralwaste
 keywords: ["hyperspectral-imaging", "semantic-segmentation", "recycling"]
-description: We introduce SpectralWaste, a dataset for waste segmentation collected in a real waste processing facility using a multimodal imaging setup comprising an RGB camera and a hyperspectral camera. 
+description: We introduce SpectralWaste, a dataset for waste segmentation collected in a real waste processing facility using a multimodal imaging setup comprising an RGB camera and a hyperspectral camera.
 image: smallteaser.png
+footer: "© 2025 the authors (as listed above). The content of this page is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). External resources (e.g., datasets, code) are subject to their own licenses."
 ---
 
 <figure>
-  <img src="teaser.png" alt="Descriptive caption">
+  <img src="teaser.png" alt="Setup of a computer vision system with RGB and hyperspectral cameras mounted over a conveyor belt. On the right, examples of RGB and hyperspectral images captured over waste materials are shown.">
 </figure>
 
 ## Description
@@ -98,7 +99,7 @@ For the paper, we use a preprocessed version of the labeled images, optimized fo
 ## BibTeX
 
 ```
-@inproceedings{pena2024spectralwaste,
+@inproceedings{casao2024spectralwaste,
   title = {{SpectralWaste} Dataset: Multimodal Data for Waste Sorting Automation},
   author = {Casao, Sara and Pe{\~n}a, Fernando and Sabater, Alberto and Castill{\'o}n, Rosa and Su{\'a}rez, Dar{\'i}o and Montijano, Eduardo and Murillo, Ana C.},
   year = {2024},
@@ -110,6 +111,6 @@ For the paper, we use a preprocessed version of the labeled images, optimized fo
 
 ## Acknowledgements
 
-This work was supported by DGA project T45 23R and by MCIN/AEI/ERDF/European Union NextGenerationEU/PRTR project PID2021-125514NB-I00. The authors thank the SEPARA project and all its partners: Ecoembes, Picvisa, PiperLab, Trienekens, Fundación GAIKER and Leitat.
+This work was supported by DGA project T45_23R and by MCIN/AEI/ERDF/European Union NextGenerationEU/PRTR project PID2021-125514NB-I00. The authors thank the SEPARA project and all its partners: Ecoembes, Picvisa, PiperLab, Trienekens, Fundación GAIKER and Leitat.
 
 <img src="/logos/aei-eu.png" style="width: 250px; display: block; margin: 0 auto">

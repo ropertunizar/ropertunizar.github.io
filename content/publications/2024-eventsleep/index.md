@@ -1,7 +1,7 @@
 ---
 date: 2024-04-02
 title: "EventSleep: Sleep Activity Recognition with Event Cameras"
-venue: "Under review"
+venue: "ECCV 2024 (NeVI Workshop)"
 authors:
   - name: "Carlos Plou"
     url: "https://cplou99.github.io/web"
@@ -29,6 +29,9 @@ authors:
     affiliations: ["DIIS-I3A, Universidad de Zaragoza"]
 links:
   - name: "Paper"
+    icon: "ai-springer"
+    url: "https://link.springer.com/chapter/10.1007/978-3-031-92460-6_4"
+  - name: "Paper"
     icon: "ai-arxiv"
     url: "https://doi.org/10.48550/arXiv.2404.01801"
   - name: "Code"
@@ -41,6 +44,7 @@ project: deep-sleep
 keywords: ["event-cameras", "action-recognition"]
 slug: eventsleep
 description: We present a dataset to investigate the suitability of event cameras to analyze in a non-invasive manner specific behaviors that occur while sleeping and lead to sleeping disorders.
+footer: "© 2025 the authors (as listed above). The content of this page is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). External resources (e.g., datasets, code) are subject to their own licenses."
 ---
 
 <figure class="teaser">
@@ -129,10 +133,12 @@ Within this context, experts in the field identified specific actions that appea
 ## BibTeX
 
 ```
-@article{plou2024eventsleep,
-  title={EventSleep: Sleep Activity Recognition with Event Cameras},
-  author={Plou, Carlos and Gallego, Nerea and Sabater, Alberto and Montijano, Eduardo and Urcola, Pablo and Montesano, Luis and Martinez-Cantin, Ruben and Murillo, Ana C.},
-  journal={arXiv preprint arXiv:2404.01801},
-  year={2024}
+@inproceedings{plou2024eventsleep,
+  title = {{EventSleep}: Sleep Activity Recognition with Event Cameras},
+  author = {Plou, Carlos and Gallego, Nerea and Sabater, Alberto and Montijano, Eduardo and Urcola, Pablo and Montesano, Luis and Martinez-Cantin, Ruben and Murillo, Ana C.},
+  year = {2024},
+  booktitle = {ECCV 2024 Workshops},
+  pages = {52--69},
+  doi = {10.1007/978-3-031-92460-6_4}
 }
 ```
