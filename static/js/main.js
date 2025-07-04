@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const button = document.createElement('button');
         button.innerHTML = '<i class="bi bi-copy"></i>';
         button.className = 'clipboard-button';
+        button.setAttribute('aria-label', 'Copy code to clipboard')
         container.appendChild(button);
 
         // insert the pre block

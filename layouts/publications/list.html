@@ -10,12 +10,14 @@
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+  <header>
+  </header>
+  <main>
+    <h1>Publications</h1>
+    {{- range .Pages }}
+        {{ .Render "summary" }}
+    {{- end }}
+  </main>
+  <footer>
+  </footer>
 </body>
-
-<h1>Publications</h1>
-
-{{- range .Pages }}
-    {{ .Render "summary" }}
-{{- end }}
-
-{{ partial "site-footer.html" . }}

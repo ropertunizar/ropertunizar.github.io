@@ -1,36 +1,54 @@
 :root {
-  --text-color: rgb(26, 26, 26);
+  --text-primary: #1a1a1a;
   --link-color: rgb(20, 20, 175);
-  --background-secondary-color: rgb(245, 245, 245);
+
+  --background: #ffffff;
+  --background-secondary: rgb(245, 245, 245);
+
+  --font-family-sans: -apple-system, system-ui, Helvetica, Arial, sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, monospace;
+
+  /* spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: ui-sans-serif, -apple-system, system-ui, Helvetica, Arial, sans-serif;
+  font-family: var(--font-family-sans);
+  font-weight: 400;
+  line-height: 1.5;
 
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 
-  color: var(--text-color);
-  line-height: 1.5em;
-  font-weight: 400;
+  color: var(--text-primary);
+  background-color: var(--background);
 
-  max-width: 800px;
+  max-width: 832px;
+  padding: 0 16px;
   margin: 0 auto;
-  padding: 1rem;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 main {
   text-align: justify;
 }
 
+header {
+  margin: var(--space-6) 0;
+}
+
 footer {
-  margin-top: 2rem;
+  margin: var(--space-6) 0;
   text-align: center;
 }
 
@@ -43,53 +61,62 @@ a:hover {
   text-decoration: underline;
 }
 
-p:not(:first-child) {
-  margin-top: .5rem;
-}
-
 p {
   margin-bottom: 1rem;
+}
+
+ul {
+  list-style-position: outside;
+  padding-inline-start: var(--space-6);
+  margin-block-end: 1rem;
+}
+
+ul ul {
+  margin-block: 0;
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.25;
+  margin-bottom: var(--space-3);
 }
 
 h1.title {
   text-align: center;
-  margin-bottom: .25em;
-  margin-top: .25em;
 }
 
 h2 {
   font-size: 1.75rem;
   font-weight: 400;
-  margin-bottom: .5em;
-  margin-top: 1em;
 }
 
 h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: .5em;
-  margin-top: 1em;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-3);
 }
 
 sup {
   font-size: 0.75rem;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .authors {
   font-size: 1.25rem;
-  display: flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  margin: 0.5rem;
-  gap: 0.25em 0.75em;
 }
 
 .notes {
@@ -98,8 +125,6 @@ sup {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  margin: 0.25rem;
-  gap: 0.25em 0.75em;
 }
 
 .affiliations {
@@ -108,14 +133,16 @@ sup {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  margin: 0.25rem;
-  gap: 0.25em 0.75em;
+}
+
+.authors, .notes, .affiliations {
+  margin: var(--space-1);
+  gap: var(--space-1) var(--space-3);
 }
 
 .venue {
   font-size: 1.25rem;
   font-style: italic;
-  margin: .5rem;
   text-align: center;
 }
 
@@ -125,61 +152,58 @@ sup {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  margin: 1rem;
-  gap: 0.5em 0.5em;
+  margin: var(--space-5) 0;
+  gap: var(--space-2);
 }
 
 .links a {
   text-decoration: none;
-  padding: 7px 20px;
   border: 1px solid var(--link-color);
   border-radius: 20px;
   transition: background-color 0.25s ease;
+  padding: var(--space-2) var(--space-4);
 }
 
 .links a:hover {
-  background-color: var(--background-secondary-color);
+  background-color: var(--background-secondary);
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 figure {
-  margin: 2rem auto;
-}
-
-figure img {
-  max-width: 100%;
-  height: auto;
+  margin: var(--space-6) auto;
 }
 
 figure figcaption {
   text-align: justify;
-  margin: 0 2rem;
   font-style: italic;
 }
 
 .code-container {
-  background-color: var(--background-secondary-color);
-  margin: 1em 0;
+  background-color: var(--background-secondary);
 }
 
 pre {
-  margin: 0;
-  padding: 1em;
-  line-height: 1.2;
+  font-family: var(--font-family-monospace);
+  line-height: 1.25;
   overflow-x: auto;
-  background-color: var(--background-secondary-color) !important;
+  padding: var(--space-4);
 }
 
 .clipboard-button {
   float: right;
-  font-size: 1em;
-  margin: 5px;
-  padding: 5px;
+  font-size: 1rem;
   color: rgba(0, 0, 0, 0.4);
   background-color: transparent;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.25s ease;
+  padding: var(--space-1);
+  margin: var(--space-2);
 }
 
 .clipboard-button:hover {
@@ -187,5 +211,5 @@ pre {
 }
 
 article.publication {
-  margin: 1rem 0;
+  margin: var(--space-4) 0;
 }
